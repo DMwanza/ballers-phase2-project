@@ -40,18 +40,18 @@ function handleAddItem(newGame) {
 
   return (
     <div className="ShoppingList">
-      <ItemForm onAddItem={handleAddItem}
-      games={games}/>
+      
       <Filter 
         games={games}
         team={team}
         onCategoryChange={handleCategoryChange}
-      />
+        />
       <ul className="Items">
         {itemsToDisplay.map((game) => (
           <Item key={game.id} game={game} onUpdateItem={handleUpdateItem} onDeleteItem={handleDeleteItem}/>
-        ))}
+          ))}
       </ul>
+          <ItemForm onAddItem={handleAddItem}games={games}/>
     </div>
   );
 }

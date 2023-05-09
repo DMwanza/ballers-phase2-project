@@ -54,6 +54,7 @@ const handleChange = (e) => {
   
 };
   return (
+    <div className="box">
     <form className="NewItem">
   <label>
     Home:
@@ -91,6 +92,7 @@ const handleChange = (e) => {
     <input
       type="text"
       name="conference"
+      placeholder="Conference"
       value={form.conference}
       onChange={handleChange}
     />
@@ -99,7 +101,9 @@ const handleChange = (e) => {
     Day:
     <input
       type="text"
+      required="required"
       name="day"
+      placeholder="Day"
       value={form.day}
       onChange={handleChange}
     />
@@ -108,7 +112,9 @@ const handleChange = (e) => {
     Time:
     <input
       type="text"
+      required="required"
       name="time"
+      placeholder="Time"
       value={form.time}
       onChange={handleChange}
     />
@@ -117,7 +123,9 @@ const handleChange = (e) => {
     Court:
     <input
       type="text"
+      required="required"
       name="court"
+      placeholder="Court"
       value={form.court}
       onChange={handleChange}
     />
@@ -127,12 +135,15 @@ const handleChange = (e) => {
     <input
       type="text"
       name="location"
+      required="required"
+      placeholder="Location"
       value={form.location}
       onChange={handleChange}
     />
   </label>
   <button type="submit" onClick={handleSubmit}>Add Match</button>
 </form>
+</div>
 
   );
 }

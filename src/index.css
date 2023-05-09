@@ -15,9 +15,10 @@
 }
 
 body {
-  background: rgb(231, 231, 231);
+  background: linear-gradient(to bottom, #20002c, #cbb4d4);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
+  background-image: url(./images/otek.jpg);
 }
 
 button,
@@ -77,7 +78,7 @@ header button {
 .Filter input {
   width: 45%;
   margin: 1rem 0;
-  background: var(--cyan);
+  background: var(--yellow);
 }
 
 .Items {
@@ -86,16 +87,18 @@ header button {
 
 .Items li {
   margin: 0.5rem 0;
-  padding: 0.25rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 160px 100px;
   column-gap: 1rem;
   align-items: center;
   border-radius: 4px;
+  border-style: groove;
 }
 
 .Items li.in-cart {
   background: var(--background-light);
+  border-style: dashed;
 }
 
 .Items li.in-cart span {
@@ -107,7 +110,7 @@ header button {
 }
 
 .Items button.remove {
-  background-color: var(--magenta);
+  background-color: #590969;
   color: white;
 }
 
@@ -127,7 +130,19 @@ header button {
   align-items: center;
   gap: 1rem;
 }
-
+.box{
+  background: #590969;
+  font-weight: bold;
+  color: white;
+  
+}
+.img{
+  width: 300px; /* Set the desired width */
+  height: 100px;
+  border-radius: 50px;
+  
+  image-rendering: crisp-edges;
+}
 .NewItem button {
   background: var(--yellow);
 }
