@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import {Switch,Route} from 'react-router-dom'
-import ShoppingList from "./ShoppingList";
+import ShoppingList from "./GameList";
 import Header from "./Header";
 import ItemForm from "./ItemForm";
 import Item from "./Item";
 import NavBar from "./NavBar";
-
+import GameList from "./GameList";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -30,7 +30,7 @@ function App() {
     <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
       <NavBar onChangePage={setPage}/>
-      <ShoppingList />
+      <GameList />
     </div>
   );
 }
